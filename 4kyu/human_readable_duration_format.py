@@ -18,9 +18,9 @@ it just returns "now". Otherwise, the duration is expressed
 def format_duration(seconds):
     if seconds == 0:
         return "now"
-    data = dict(years=365*24*3600, days=24*3600, hours=3600, minutes=60, seconds=1)
+    data = (("years", 365*24*3600), ("days", 24*3600), ("hours", 3600), ("minutes", 60), ("seconds", 1))
     message = []
-    for key, value in data.items(): 
+    for key, value in data: 
         if time := seconds // value:
             seconds -= time * value
             key = key if time != 1 else key[:-1]

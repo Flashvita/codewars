@@ -14,3 +14,5 @@ def domain_name(url):
 
 
 print(domain_name('http://google.com'))
+print(domain_name("http://www.zombie-bites.com"))
+print(domain_name("https://www.cnet.com" ))
